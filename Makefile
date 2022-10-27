@@ -3,7 +3,7 @@ CC=gcc
 
 #Project flags
 C_FILES = $(wildcard src/*.c)
-OBJS = $(C_FILES:src/%.c=build/%.o)
+OBJS = $(patsubst src/%.c, build/%.o, $(C_FILES))
 EXECS = $(C_FILES:src/%.c=bin/%)
 
 all: $(EXECS)
@@ -20,3 +20,5 @@ build/%.o: src/%.c | build
 
 clean:
 	rm -f $(OBJS) $(EXECS)
+	rm -R build
+	rm -R bin

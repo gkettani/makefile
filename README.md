@@ -1,5 +1,6 @@
 # Makefile example
-## Following workflow
+A small Makefile sample using usefull patterns 
+## Workflow
 1. Take multiple source files in src/ folder
 2. Create a .o file for each one in build/ folder
 3. Then create an executable for each one in bin/ folder
